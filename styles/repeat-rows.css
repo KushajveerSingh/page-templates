@@ -50,3 +50,14 @@
   justify-content: center;
   border-bottom: 1.2pt solid #333;
 }
+
+.col {
+  border-bottom: 1pt solid #888;
+  border-right: 0.75pt solid #bbb;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.col:last-child {
+  border-right: none;
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Project Planner</title>
+
+    <link rel="stylesheet" href="styles/global-letter-page.css" />
+    <link rel="stylesheet" href="styles/repeat-rows.css" />
+
+    <style>
+      .col-num {
+        width: 36px;
+        flex-shrink: 0;
+      }
+
+      .col-name {
+        flex-grow: 1;
+      }
+
+      .col-prereq {
+        width: 150px;
+        flex-shrink: 0;
+      }
+
+      .col-parallel {
+        width: 150px;
+        flex-shrink: 0;
+      }
+    </style>
+
+    <script src="scripts/repeat-rows.js" defer></script>
+  </head>
+
+  <body>
+    <main id="container"></main>
+
+    <template id="template_header">
+      <div class="header">
+        <span class="title">TITLE:</span>
+        <span class="date">DATE:</span>
+      </div>
+    </template>
+
+    <template id="template_row_header">
+      <div class="row row-header">
+        <div class="col col-num">#</div>
+        <div class="col col-name">Project Name</div>
+        <div class="col col-prereq">Pre</div>
+        <div class="col col-parallel">Parallel</div>
+      </div>
+    </template>
+
+    <template id="template_row">
+      <div class="row">
+        <div class="col col-num"></div>
+        <div class="col col-name"></div>
+        <div class="col col-prereq"></div>
+        <div class="col col-parallel"></div>
+      </div>
+    </template>
+  </body>
+</html>
