@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Activity Log</title>
+
+    <link rel="stylesheet" href="styles/global-letter-page.css" />
+    <link rel="stylesheet" href="styles/repeat-rows.css" />
+
+    <style>
+      .row {
+        gap: 0;
+      }
+
+      .col {
+        border-bottom: 1pt solid #888;
+        border-right: 0.75pt solid #bbb;
+        box-sizing: border-box;
+        height: 100%;
+      }
+
+      .col:last-child {
+        border-right: none;
+      }
+
+      .col-date {
+        width: 80px;
+        flex-shrink: 0;
+      }
+
+      .col-start {
+        width: 80px;
+        flex-shrink: 0;
+      }
+
+      .col-end {
+        width: 80px;
+        flex-shrink: 0;
+      }
+
+      .col-activity {
+        flex-grow: 1;
+      }
+    </style>
+
+    <script src="scripts/repeat-rows.js" defer></script>
+  </head>
+
+  <body>
+    <main id="container"></main>
+
+    <template id="template_header">
+      <div class="header">
+        <span class="title">TITLE:</span>
+        <span class="date">DATE:</span>
+      </div>
+    </template>
+
+    <template id="template_row_header">
+      <div class="row row-header">
+        <div class="col col-date">Date</div>
+        <div class="col col-start">Start</div>
+        <div class="col col-end">End</div>
+        <div class="col col-activity">Activity</div>
+      </div>
+    </template>
+
+    <template id="template_row">
+      <div class="row">
+        <div class="col col-date"></div>
+        <div class="col col-start"></div>
+        <div class="col col-end"></div>
+        <div class="col col-activity"></div>
+      </div>
+    </template>
+  </body>
+</html>

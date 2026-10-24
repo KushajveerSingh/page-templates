@@ -33,7 +33,20 @@
 .row {
   display: flex;
   align-items: flex-end;
-  gap: var(--default-spacing);
   flex-shrink: 0;
   height: var(--college-ruled-height);
+}
+
+.row-header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #222;
+  text-transform: uppercase;
+}
+
+.row-header .col {
+  display: flex;
+  align-items: last baseline;
+  justify-content: center;
+  border-bottom: 1.2pt solid #333;
 }
