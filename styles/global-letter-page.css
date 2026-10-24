@@ -1,0 +1,21 @@
+:root {
+  --default-margin: 0.25in;
+  --offset-margin: 0.65in;
+  --college-ruled-height: 0.28125in;
+  --default-spacing: 10px;
+}
+
+body {
+  margin: 0;
+}
+
+@page {
+  size: letter portrait;
+  margin-block: var(--default-margin);
+}
+@page :right {
+  margin-inline: var(--offset-margin) var(--default-margin);
+}
+@page :left {
+  margin-inline: var(--default-margin) var(--offset-margin);
+}
